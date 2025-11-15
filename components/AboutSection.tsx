@@ -1,11 +1,17 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
 import { imageSizePresets, imageQualityPresets } from '@/utils/imageOptimization';
+import {
+  fadeIn,
+  smoothTransition,
+  getDelayedTransition,
+  getAccessibleVariants,
+  getAccessibleTransition,
+} from '@/utils/animations';
 
 interface AboutSectionProps {
   heading: string;
@@ -21,11 +27,6 @@ export default function AboutSection({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const fadeInVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-  };
-
   return (
     <section
       id="about"
@@ -34,10 +35,10 @@ export default function AboutSection({
     >
       <div className="max-w-6xl mx-auto w-full">
         <motion.div
-          variants={fadeInVariants}
+          variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate={isInView ? 'animate' : 'initial'}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={getAccessibleTransition(smoothTransition)}
         >
           <h2 className="text-3xl mobile:text-4xl tablet:text-5xl desktop:text-6xl font-bold mb-8 tablet:mb-12 desktop:mb-16 leading-tight">
             {heading}
@@ -47,10 +48,10 @@ export default function AboutSection({
         <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 tablet:gap-10 desktop:gap-16">
           <motion.div
             className="space-y-4 tablet:space-y-6"
-            variants={fadeInVariants}
+            variants={getAccessibleVariants(fadeIn)}
             initial="initial"
             animate={isInView ? 'animate' : 'initial'}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+            transition={getAccessibleTransition(getDelayedTransition(0.2))}
           >
             {content.map((paragraph, index) => (
               <p
@@ -65,10 +66,10 @@ export default function AboutSection({
           {imageUrl && (
             <motion.div
               className="flex items-center justify-center relative"
-              variants={fadeInVariants}
+              variants={getAccessibleVariants(fadeIn)}
               initial="initial"
               animate={isInView ? 'animate' : 'initial'}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+              transition={getAccessibleTransition(getDelayedTransition(0.4))}
             >
               <div className="relative w-full h-64 tablet:h-80 desktop:h-96">
                 <Image
