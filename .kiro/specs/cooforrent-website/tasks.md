@@ -252,7 +252,7 @@
   - Check performance on mobile networks
   - _Requirements: 2.1, 2.2, 2.4_
 
-- [-] 14. Set up deployment and monitoring
+- [x] 14. Set up deployment and monitoring
   - _Requirements: 6.1_
 
 - [x] 14.1 Configure Vercel deployment
@@ -261,7 +261,7 @@
   - Configure build settings
   - _Requirements: 6.1_
 
-- [-] 14.2 Set up error tracking and monitoring
+- [x] 14.2 Set up error tracking and monitoring
   - Integrate Sentry for error tracking
   - Set up Core Web Vitals monitoring
   - Configure analytics

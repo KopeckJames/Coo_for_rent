@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import StructuredData from "@/components/StructuredData";
+import { WebVitals } from "./web-vitals";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -66,7 +67,10 @@ export default function RootLayout({
       <head>
         <StructuredData />
       </head>
-      <body className="font-primary antialiased">{children}</body>
+      <body className="font-primary antialiased">
+        <WebVitals />
+        {children}
+      </body>
     </html>
   );
 }
