@@ -75,7 +75,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
           {/* Mobile Menu Panel */}
           <motion.div
-            className="fixed top-0 right-0 bottom-0 w-64 mobile:w-72 bg-primary-black z-50 tablet:hidden will-change-transform"
+            className="fixed top-0 right-0 bottom-0 w-64 mobile:w-72 bg-primary-white z-50 tablet:hidden will-change-transform shadow-2xl"
             variants={panelVariants}
             initial="hidden"
             animate="visible"
@@ -93,7 +93,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <div className="flex justify-end p-4">
                 <button
                   onClick={onClose}
-                  className="text-primary-white hover:text-neutral-gray200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  className="text-primary-black hover:text-neutral-gray800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-black p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
                   aria-label="Close mobile menu"
                 >
                   <svg
@@ -128,7 +128,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       <a
                         href={link.href}
                         onClick={(e) => handleNavClick(e, link.href)}
-                        className="block text-lg mobile:text-xl font-medium text-primary-white hover:text-neutral-gray200 transition-colors py-3 min-h-[44px] flex items-center"
+                        className="block text-lg mobile:text-xl font-medium text-primary-black hover:text-neutral-gray800 transition-colors py-3 min-h-[44px] flex items-center"
                       >
                         {link.label}
                       </a>

@@ -29,12 +29,12 @@ export default function ServicesSection({
       id="services"
       ref={ref}
       aria-labelledby="services-heading"
-      className="min-h-screen bg-primary-black text-primary-white flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
+      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           id="services-heading"
-          className="text-3xl mobile:text-4xl tablet:text-5xl desktop:text-6xl font-bold mb-8 tablet:mb-12 desktop:mb-16 text-center leading-tight"
+          className="text-3xl mobile:text-4xl tablet:text-5xl font-bold mb-4 text-center leading-tight uppercase tracking-wide"
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate={isInView ? 'animate' : 'initial'}
@@ -43,7 +43,17 @@ export default function ServicesSection({
           {heading}
         </motion.h2>
 
-        <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-4 tablet:gap-6 desktop:gap-8">
+        <motion.p
+          className="text-center text-lg text-neutral-gray800 mb-12 tablet:mb-16 max-w-3xl mx-auto"
+          variants={getAccessibleVariants(fadeIn)}
+          initial="initial"
+          animate={isInView ? 'animate' : 'initial'}
+          transition={getAccessibleTransition(smoothTransition)}
+        >
+          Find the Right Type of Engagement For Your Business
+        </motion.p>
+
+        <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-6 tablet:gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}

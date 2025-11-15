@@ -9,7 +9,7 @@ import {
 // Hero Section Content
 export const heroContent: HeroContent = {
   title: 'COOforRent',
-  subtitle: 'Fractional COO Services for Growing Businesses',
+  subtitle: 'You built something great — now it\'s breaking under its own weight.',
   ctaText: 'Get Started',
 };
 
@@ -23,58 +23,65 @@ export const navigationLinks: NavigationLink[] = [
 
 // About Section Content
 export const aboutContent: AboutContent = {
-  heading: 'About COOforRent',
+  heading: 'Fractional COO for Hire',
   content: [
-    'COOforRent provides fractional Chief Operating Officer services to growing businesses that need executive-level operational expertise without the commitment of a full-time hire.',
-    'Our experienced COOs work with your team to streamline operations, implement scalable processes, and drive sustainable growth. We bring decades of operational excellence to help you achieve your business goals.',
-    'Whether you need strategic planning, process optimization, or operational leadership, our fractional COO model gives you access to top-tier talent on a flexible, cost-effective basis.',
+    'Based in Texas, I work with founders, trades, service companies, and restaurant groups who are scaling fast, but losing control. I build systems, people, and processes that hold up — even when your business is moving fast.',
+    '25+ years\' experience in operations, field service, construction, and franchise systems. I\'ve led 50+ teams across 4 major cities.',
+    'I roll up my sleeves — no fluff, no buzzwords. Just systems that work.',
   ],
+  imageUrl: '/sonny.png',
 };
 
 // Services Section Content
 export const servicesContent: ServicesContent = {
-  heading: 'Our Services',
+  heading: 'Packages',
   services: [
     {
-      id: 'strategic-planning',
-      title: 'Strategic Planning',
+      id: 'chaos-to-clarity',
+      title: 'Chaos to Clarity',
       description:
-        'Develop comprehensive operational strategies aligned with your business objectives. We help you create actionable roadmaps for sustainable growth.',
+        '90-day intensive engagement to stabilize operations, implement core systems, and establish accountability frameworks. Perfect for businesses in rapid growth or crisis mode.',
+      icon: 'target',
       order: 1,
     },
     {
-      id: 'process-optimization',
-      title: 'Process Optimization',
+      id: 'interim-coo',
+      title: 'Interim COO',
       description:
-        'Streamline your operations and eliminate inefficiencies. We analyze your current processes and implement improvements that drive productivity.',
+        '3–6 month embedded leadership to build operational infrastructure, lead teams, and drive strategic initiatives. Full operational oversight during transitions or scaling phases.',
+      icon: 'briefcase',
       order: 2,
     },
     {
-      id: 'team-leadership',
-      title: 'Team Leadership',
+      id: 'on-call-retainer',
+      title: 'On-Call Retainer',
       description:
-        'Provide operational leadership and mentorship to your team. We build high-performing operations teams and foster a culture of excellence.',
+        'Flexible monthly retainer for ongoing operational guidance, strategic planning, and problem-solving. Access to COO-level expertise when you need it.',
+      icon: 'phone',
       order: 3,
     },
     {
-      id: 'systems-implementation',
-      title: 'Systems Implementation',
+      id: 'operations-overhaul',
+      title: 'Operations Overhaul',
       description:
-        'Deploy scalable systems and tools that support your growth. We select and implement the right technology solutions for your operations.',
+        'Complete assessment and redesign of operational systems, workflows, and processes. Eliminate bottlenecks and build scalable infrastructure.',
+      icon: 'settings',
       order: 4,
     },
     {
-      id: 'performance-metrics',
-      title: 'Performance Metrics',
+      id: 'dispatch-field-service',
+      title: 'Dispatch & Field Service Efficiency',
       description:
-        'Establish KPIs and dashboards to track operational performance. We help you measure what matters and make data-driven decisions.',
+        'Optimize scheduling, routing, and field operations. Improve response times, reduce costs, and increase customer satisfaction for service-based businesses.',
+      icon: 'truck',
       order: 5,
     },
     {
-      id: 'change-management',
-      title: 'Change Management',
+      id: 'margin-profit-optimization',
+      title: 'Margin & Profit Optimization',
       description:
-        'Navigate organizational transitions smoothly and effectively. We guide your team through change while maintaining operational continuity.',
+        'Identify profit leaks, optimize pricing strategies, and improve operational margins. Data-driven approach to maximize profitability without sacrificing quality.',
+      icon: 'trending-up',
       order: 6,
     },
   ],

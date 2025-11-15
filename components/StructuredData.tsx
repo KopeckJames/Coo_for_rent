@@ -3,9 +3,11 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'COOforRent',
-    description: 'Professional fractional COO services for growing businesses',
+    description: 'Fractional COO for hire. 25+ years in operations, field service, construction, and franchise systems.',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com',
     logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com'}/logo.svg`,
+    telephone: '+1-830-837-8060',
+    email: 'Sonny@CooForRent.com',
     sameAs: [
       // Add social media profiles when available
       // 'https://www.linkedin.com/company/cooforrent',
@@ -13,8 +15,10 @@ export default function StructuredData() {
     ],
     address: {
       '@type': 'PostalAddress',
+      addressRegion: 'TX',
       addressCountry: 'US',
     },
+    foundingDate: '2025',
     serviceType: 'Fractional COO Services',
     areaServed: {
       '@type': 'Country',
@@ -22,34 +26,68 @@ export default function StructuredData() {
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Fractional COO Services',
+      name: 'Fractional COO Packages',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Strategic Planning',
-            description: 'Develop and execute comprehensive operational strategies aligned with business goals',
+            name: 'Chaos to Clarity',
+            description: '90-day intensive engagement to stabilize operations and implement core systems',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Process Optimization',
-            description: 'Streamline operations and improve efficiency across all business functions',
+            name: 'Interim COO',
+            description: '3–6 month embedded leadership to build operational infrastructure',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Team Leadership',
-            description: 'Build and mentor high-performing operational teams',
+            name: 'On-Call Retainer',
+            description: 'Flexible monthly retainer for ongoing operational guidance',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Operations Overhaul',
+            description: 'Complete assessment and redesign of operational systems',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Dispatch & Field Service Efficiency',
+            description: 'Optimize scheduling, routing, and field operations',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Margin & Profit Optimization',
+            description: 'Identify profit leaks and optimize pricing strategies',
           },
         },
       ],
     },
+    knowsAbout: [
+      'Operations Management',
+      'Field Service',
+      'Construction Operations',
+      'Franchise Systems',
+      'Dispatch Operations',
+      'Team Leadership',
+      'Process Implementation',
+      'Profit Optimization',
+    ],
   };
 
   return (

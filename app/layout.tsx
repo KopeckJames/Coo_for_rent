@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     default: "COOforRent - Fractional COO Services",
     template: "%s | COOforRent",
   },
-  description: "Professional fractional COO services for growing businesses. Expert operational leadership on demand to scale your company efficiently.",
-  keywords: ["fractional COO", "COO services", "operational leadership", "business operations", "executive services", "part-time COO"],
+  description: "Fractional COO for hire based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems, people, and processes that hold up when your business is moving fast.",
+  keywords: ["fractional COO", "COO for hire", "operations consulting", "field service operations", "construction operations", "franchise systems", "Texas COO", "operational leadership", "business systems"],
   authors: [{ name: "COOforRent" }],
   creator: "COOforRent",
   publisher: "COOforRent",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "COOforRent - Fractional COO Services",
-    description: "Professional fractional COO services for growing businesses. Expert operational leadership on demand to scale your company efficiently.",
+    title: "COOforRent - Fractional COO for Hire",
+    description: "Fractional COO for hire based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems that hold up when your business is moving fast.",
     siteName: "COOforRent",
     images: [
       {
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "COOforRent - Fractional COO Services",
-    description: "Professional fractional COO services for growing businesses. Expert operational leadership on demand to scale your company efficiently.",
+    title: "COOforRent - Fractional COO for Hire",
+    description: "Fractional COO for hire based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems that hold up when your business is moving fast.",
     images: ["/og-image.png"],
   },
   robots: {

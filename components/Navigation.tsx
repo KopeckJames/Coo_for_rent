@@ -43,7 +43,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary-black border-b border-neutral-gray800" aria-label="Main navigation">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary-white border-b border-neutral-gray200 shadow-sm" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 tablet:h-16">
           {/* Logo */}
@@ -51,17 +51,17 @@ export default function Navigation() {
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, '#hero')}
-              className="text-lg tablet:text-xl font-bold text-primary-white hover:text-neutral-gray200 transition-colors flex items-center"
+              className="text-lg tablet:text-xl font-bold text-primary-black hover:text-neutral-gray800 transition-colors flex items-center"
               aria-label="COOforRent home"
             >
               <Image
-                src="/logo.svg"
+                src="/logoi.jpeg"
                 alt="COOforRent"
                 width={120}
                 height={40}
                 priority
                 sizes={imageSizePresets.logo}
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </a>
           </div>
@@ -77,8 +77,8 @@ export default function Navigation() {
                     aria-current={activeSection === link.id ? 'page' : undefined}
                     className={`text-sm desktop:text-base font-medium transition-colors min-h-[44px] flex items-center ${
                       activeSection === link.id
-                        ? 'text-primary-white border-b-2 border-primary-white pb-1'
-                        : 'text-neutral-gray200 hover:text-primary-white'
+                        ? 'text-primary-black border-b-2 border-primary-black pb-1'
+                        : 'text-neutral-gray800 hover:text-primary-black'
                     }`}
                   >
                     {link.label}
@@ -92,7 +92,7 @@ export default function Navigation() {
           <div className="tablet:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="text-primary-white hover:text-neutral-gray200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="text-primary-black hover:text-neutral-gray800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-black p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Open mobile menu"
               aria-expanded={isMobileMenuOpen}
             >

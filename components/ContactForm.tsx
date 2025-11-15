@@ -53,9 +53,9 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           aria-required="true"
           aria-invalid={errors.name ? 'true' : 'false'}
           aria-describedby={errors.name ? 'name-error' : undefined}
-          className={`w-full bg-transparent border-0 border-b-2 ${
+          className={`w-full bg-white border-2 ${
             errors.name ? 'border-accent-error' : 'border-neutral-gray200'
-          } focus:border-primary-black focus:outline-none text-primary-black placeholder-neutral-gray200 py-3 transition-colors disabled:opacity-50 min-h-[44px]`}
+          } focus:border-primary-black focus:outline-none text-primary-black placeholder-neutral-gray800 px-4 py-3 transition-colors disabled:opacity-50 min-h-[44px]`}
           style={{ fontSize: '16px' }}
           {...register('name', {
             required: 'Name is required',
@@ -85,9 +85,9 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           aria-required="true"
           aria-invalid={errors.email ? 'true' : 'false'}
           aria-describedby={errors.email ? 'email-error' : undefined}
-          className={`w-full bg-transparent border-0 border-b-2 ${
+          className={`w-full bg-white border-2 ${
             errors.email ? 'border-accent-error' : 'border-neutral-gray200'
-          } focus:border-primary-black focus:outline-none text-primary-black placeholder-neutral-gray200 py-3 transition-colors disabled:opacity-50 min-h-[44px]`}
+          } focus:border-primary-black focus:outline-none text-primary-black placeholder-neutral-gray800 px-4 py-3 transition-colors disabled:opacity-50 min-h-[44px]`}
           style={{ fontSize: '16px' }}
           {...register('email', {
             required: 'Email is required',
@@ -117,9 +117,9 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           aria-required="true"
           aria-invalid={errors.message ? 'true' : 'false'}
           aria-describedby={errors.message ? 'message-error' : undefined}
-          className={`w-full bg-transparent border-0 border-b-2 ${
+          className={`w-full bg-white border-2 ${
             errors.message ? 'border-accent-error' : 'border-neutral-gray200'
-          } focus:border-primary-black focus:outline-none text-primary-black placeholder-neutral-gray200 py-3 resize-none transition-colors disabled:opacity-50`}
+          } focus:border-primary-black focus:outline-none text-primary-black placeholder-neutral-gray800 px-4 py-3 resize-none transition-colors disabled:opacity-50`}
           style={{ fontSize: '16px' }}
           {...register('message', {
             required: 'Message is required',
@@ -142,7 +142,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           type="submit"
           disabled={isSubmitting}
           aria-busy={isSubmitting}
-          className="px-6 py-3 tablet:px-8 tablet:py-4 bg-primary-black text-primary-white text-base tablet:text-lg font-medium hover:bg-neutral-gray800 active:bg-neutral-gray900 focus:outline-none focus:ring-2 focus:ring-primary-black focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] min-w-[120px] touch-target will-change-transform active:scale-[0.98]"
+          className="px-8 py-4 bg-primary-black text-primary-white text-base font-semibold hover:bg-neutral-gray900 hover:shadow-2xl active:bg-neutral-gray800 focus:outline-none focus:ring-2 focus:ring-primary-black focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] min-w-[120px] touch-target will-change-transform active:scale-[0.98]"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>

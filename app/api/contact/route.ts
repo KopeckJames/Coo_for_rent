@@ -43,7 +43,7 @@ async function sendEmail(data: ContactFormData): Promise<void> {
 
   const emailPayload = {
     from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-    to: process.env.CONTACT_EMAIL || 'contact@cooforrent.com',
+    to: process.env.CONTACT_EMAIL || 'Sonny@CooForRent.com',
     subject: `New Contact Form Submission from ${data.name}`,
     html: `
       <h2>New Contact Form Submission</h2>
