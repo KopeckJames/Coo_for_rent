@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    @apply text-body leading-normal;
+    /* Ensure minimum font size on mobile for readability */
+    font-size: 16px;
+  }
+
+  /* Ensure hover states only apply on devices that support hover */
+  @media (hover: hover) and (pointer: fine) {
+    /* Hover styles will be applied only on devices with precise pointing (mouse) */
+  }
+
+  /* Improve readability on small screens */
+  @media (max-width: 767px) {
+    body {
+      font-size: 16px; /* Prevent iOS zoom on input focus */
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  /* Touch-friendly tap highlight */
+  .touch-target {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improved text readability utilities */
+  .text-readable {
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  .text-heading-readable {
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  /* Performance optimizations for animations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* GPU acceleration for transforms */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
