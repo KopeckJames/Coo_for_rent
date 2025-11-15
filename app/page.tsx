@@ -33,8 +33,13 @@ const ContactForm = dynamic(() => import('@/components/ContactForm'), {
 
 export default function Home() {
   const handleCtaClick = () => {
-    const contactSection = document.getElementById('contact');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
+    // Import smoothScrollToId dynamically to avoid SSR issues
+    import('@/utils/smoothScroll').then(({ smoothScrollToId }) => {
+      smoothScrollToId('contact', {
+        offset: 64, // Height of fixed navigation
+        duration: 800,
+      });
+    });
   };
 
   const handleContactSubmit = async (data: ContactFormData) => {
@@ -55,27 +60,29 @@ export default function Home() {
 
   return (
     <Layout>
-      <HeroSection
-        title={heroContent.title}
-        subtitle={heroContent.subtitle}
-        ctaText={heroContent.ctaText}
-        onCtaClick={handleCtaClick}
-      />
+      <main id="main-content">
+        <HeroSection
+          title={heroContent.title}
+          subtitle={heroContent.subtitle}
+          ctaText={heroContent.ctaText}
+          onCtaClick={handleCtaClick}
+        />
 
-      <AboutSection
-        heading={aboutContent.heading}
-        content={aboutContent.content}
-        imageUrl={aboutContent.imageUrl}
-      />
+        <AboutSection
+          heading={aboutContent.heading}
+          content={aboutContent.content}
+          imageUrl={aboutContent.imageUrl}
+        />
 
-      <ServicesSection
-        heading={servicesContent.heading}
-        services={servicesContent.services}
-      />
+        <ServicesSection
+          heading={servicesContent.heading}
+          services={servicesContent.services}
+        />
 
-      <ContactSection heading={contactContent.heading}>
-        <ContactForm onSubmit={handleContactSubmit} />
-      </ContactSection>
+        <ContactSection heading={contactContent.heading}>
+          <ContactForm onSubmit={handleContactSubmit} />
+        </ContactSection>
+      </main>
     </Layout>
   );
 }

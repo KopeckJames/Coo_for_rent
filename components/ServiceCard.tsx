@@ -4,6 +4,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { imageSizePresets, imageQualityPresets } from '@/utils/imageOptimization';
+import {
+  fadeIn,
+  scaleOnHover,
+  scaleOnTap,
+  getDelayedTransition,
+  getAccessibleVariants,
+  getAccessibleTransition,
+} from '@/utils/animations';
 
 interface ServiceCardProps {
   title: string;
@@ -20,32 +28,23 @@ export default function ServiceCard({
   index,
   isInView,
 }: ServiceCardProps) {
-  const fadeInVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-  };
-
   return (
-    <motion.div
-      className="border border-white p-6 tablet:p-8 transition-transform duration-200 active:scale-[0.98]"
-      variants={fadeInVariants}
+    <motion.article
+      className="border border-primary-white p-6 tablet:p-8 will-change-transform transition-colors duration-200 hover:bg-neutral-gray900 focus-within:bg-neutral-gray900"
+      variants={getAccessibleVariants(fadeIn)}
       initial="initial"
       animate={isInView ? 'animate' : 'initial'}
-      transition={{
-        duration: 0.6,
-        ease: 'easeOut',
-        delay: index * 0.1,
-      }}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      transition={getAccessibleTransition(getDelayedTransition(index * 0.1))}
+      whileHover={scaleOnHover}
+      whileTap={scaleOnTap}
     >
       {icon && (
-        <div className="mb-3 tablet:mb-4">
+        <div className="mb-3 tablet:mb-4" aria-hidden="true">
           {icon.startsWith('/') || icon.startsWith('http') ? (
             <div className="relative w-12 h-12 tablet:w-16 tablet:h-16">
               <Image
                 src={icon}
-                alt={`${title} icon`}
+                alt=""
                 fill
                 sizes={imageSizePresets.serviceIcon}
                 className="object-contain"
@@ -61,9 +60,9 @@ export default function ServiceCard({
       <h3 className="text-xl mobile:text-2xl tablet:text-3xl font-bold mb-3 tablet:mb-4 leading-tight">
         {title}
       </h3>
-      <p className="text-sm mobile:text-base tablet:text-lg leading-relaxed text-gray-200">
+      <p className="text-sm mobile:text-base tablet:text-lg leading-relaxed text-neutral-gray200">
         {description}
       </p>
-    </motion.div>
+    </motion.article>
   );
 }

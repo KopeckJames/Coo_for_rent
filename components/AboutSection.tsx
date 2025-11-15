@@ -31,7 +31,8 @@ export default function AboutSection({
     <section
       id="about"
       ref={ref}
-      className="min-h-screen bg-white text-black flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
+      aria-labelledby="about-heading"
+      className="min-h-screen bg-primary-white text-primary-black flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
     >
       <div className="max-w-6xl mx-auto w-full">
         <motion.div
@@ -40,7 +41,7 @@ export default function AboutSection({
           animate={isInView ? 'animate' : 'initial'}
           transition={getAccessibleTransition(smoothTransition)}
         >
-          <h2 className="text-3xl mobile:text-4xl tablet:text-5xl desktop:text-6xl font-bold mb-8 tablet:mb-12 desktop:mb-16 leading-tight">
+          <h2 id="about-heading" className="text-3xl mobile:text-4xl tablet:text-5xl desktop:text-6xl font-bold mb-8 tablet:mb-12 desktop:mb-16 leading-tight">
             {heading}
           </h2>
         </motion.div>
@@ -56,7 +57,7 @@ export default function AboutSection({
             {content.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-base mobile:text-lg tablet:text-xl leading-relaxed text-gray-800"
+                className="text-base mobile:text-lg tablet:text-xl leading-relaxed text-neutral-gray800"
               >
                 {paragraph}
               </p>
@@ -74,7 +75,7 @@ export default function AboutSection({
               <div className="relative w-full h-64 tablet:h-80 desktop:h-96">
                 <Image
                   src={imageUrl}
-                  alt="About COOforRent"
+                  alt="About COOforRent - Our mission and approach to fractional COO services"
                   fill
                   sizes={imageSizePresets.aboutImage}
                   className="object-cover"

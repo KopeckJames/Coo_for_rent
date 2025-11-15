@@ -28,7 +28,8 @@ export default function HeroSection({
   return (
     <section
       id="hero"
-      className="min-h-screen bg-black text-white flex items-center justify-center px-4 sm:px-6 lg:px-8"
+      aria-label="Hero section"
+      className="min-h-screen bg-primary-black text-primary-white flex items-center justify-center px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1
@@ -41,7 +42,7 @@ export default function HeroSection({
           {title}
         </motion.h1>
         <motion.p
-          className="text-lg mobile:text-xl tablet:text-2xl desktop:text-3xl font-light mb-8 tablet:mb-12 text-gray-200 leading-relaxed"
+          className="text-lg mobile:text-xl tablet:text-2xl desktop:text-3xl font-light mb-8 tablet:mb-12 text-neutral-gray200 leading-relaxed"
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate="animate"
@@ -51,7 +52,8 @@ export default function HeroSection({
         </motion.p>
         <motion.button
           onClick={onCtaClick}
-          className="bg-white text-black px-6 py-3 tablet:px-8 tablet:py-4 text-base tablet:text-lg font-medium transition-colors duration-200 min-h-[44px] min-w-[44px] hover:bg-gray-100 active:bg-gray-200 touch-target"
+          aria-label="Get in touch with us"
+          className="bg-primary-white text-primary-black px-6 py-3 tablet:px-8 tablet:py-4 text-base tablet:text-lg font-medium transition-colors duration-200 min-h-[44px] min-w-[44px] hover:bg-neutral-gray100 active:bg-neutral-gray200 focus:outline-none focus:ring-2 focus:ring-primary-white focus:ring-offset-2 focus:ring-offset-primary-black touch-target"
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate="animate"

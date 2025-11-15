@@ -1,11 +1,16 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import ServiceCard from './ServiceCard';
 import { Service } from '@/types';
+import {
+  fadeIn,
+  smoothTransition,
+  getAccessibleVariants,
+  getAccessibleTransition,
+} from '@/utils/animations';
 
 interface ServicesSectionProps {
   heading: string;
@@ -19,24 +24,21 @@ export default function ServicesSection({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const fadeInVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-  };
-
   return (
     <section
       id="services"
       ref={ref}
-      className="min-h-screen bg-black text-white flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
+      aria-labelledby="services-heading"
+      className="min-h-screen bg-primary-black text-primary-white flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
+          id="services-heading"
           className="text-3xl mobile:text-4xl tablet:text-5xl desktop:text-6xl font-bold mb-8 tablet:mb-12 desktop:mb-16 text-center leading-tight"
-          variants={fadeInVariants}
+          variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate={isInView ? 'animate' : 'initial'}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={getAccessibleTransition(smoothTransition)}
         >
           {heading}
         </motion.h2>

@@ -4,17 +4,22 @@
 
 @layer base {
   html {
+    /* Enable smooth scrolling for anchor links */
     scroll-behavior: smooth;
     /* Improve text rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Optimize scroll performance */
+    scroll-padding-top: 64px; /* Account for fixed navigation */
   }
   
   body {
     @apply text-body leading-normal;
     /* Ensure minimum font size on mobile for readability */
     font-size: 16px;
+    /* Prevent scroll chaining on mobile */
+    overscroll-behavior-y: none;
   }
 
   /* Ensure hover states only apply on devices that support hover */
@@ -37,19 +42,23 @@
 }
 
 @layer utilities {
+  /* Optimized fade-in animation that prevents layout shift */
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(10px) translateZ(0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) translateZ(0);
     }
   }
 
   .animate-fade-in {
-    animation: fade-in 0.6s ease-out;
+    animation: fade-in 0.6s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    /* Prevent layout shift during animation */
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   /* Touch-friendly tap highlight */
@@ -79,11 +88,17 @@
     will-change: opacity;
   }
 
-  /* GPU acceleration for transforms */
+  /* GPU acceleration for transforms - prevents layout shift */
   .gpu-accelerated {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
+  }
+
+  /* Prevent layout shift during animations */
+  .no-layout-shift {
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   /* Reduce motion for users who prefer it */
@@ -95,6 +110,12 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+
+    /* Disable Framer Motion animations */
+    .motion-reduce {
+      animation: none !important;
+      transition: none !important;
     }
   }
 }
