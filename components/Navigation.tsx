@@ -55,7 +55,7 @@ export default function Navigation() {
               aria-label="COOforRent home"
             >
               <Image
-                src="/logoi.jpeg"
+                src="/logo.png"
                 alt="COOforRent"
                 width={120}
                 height={40}

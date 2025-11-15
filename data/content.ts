@@ -29,7 +29,7 @@ export const aboutContent: AboutContent = {
     '25+ years\' experience in operations, field service, construction, and franchise systems. I\'ve led 50+ teams across 4 major cities.',
     'I roll up my sleeves — no fluff, no buzzwords. Just systems that work.',
   ],
-  imageUrl: '/sonny.png',
+  imageUrl: '/sonnytransparent.png',
 };
 
 // Services Section Content

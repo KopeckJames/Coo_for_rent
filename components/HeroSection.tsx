@@ -41,7 +41,7 @@ export default function HeroSection({
           transition={getAccessibleTransition(smoothTransition)}
         >
           <Image
-            src="/logoi.jpeg"
+            src="/logo.png"
             alt="COOforRent"
             width={250}
             height={83}

@@ -5,7 +5,7 @@ export default function StructuredData() {
     name: 'COOforRent',
     description: 'Fractional COO for hire. 25+ years in operations, field service, construction, and franchise systems.',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com',
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com'}/logo.svg`,
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com'}/logo.png`,
     telephone: '+1-830-837-8060',
     email: 'Sonny@CooForRent.com',
     sameAs: [
