@@ -33,9 +33,9 @@ export default function AboutSection({
       id="about"
       ref={ref}
       aria-labelledby="about-heading"
-      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
+      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-12 tablet:py-14 desktop:py-16"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto scale-[0.85]">
         <motion.div
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
@@ -72,7 +72,7 @@ export default function AboutSection({
           )}
 
           <motion.div
-            className="space-y-6"
+            className="space-y-6 scale-[0.90]"
             variants={getAccessibleVariants(fadeIn)}
             initial="initial"
             animate={isInView ? 'animate' : 'initial'}

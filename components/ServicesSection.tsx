@@ -29,9 +29,9 @@ export default function ServicesSection({
       id="services"
       ref={ref}
       aria-labelledby="services-heading"
-      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-16 tablet:py-20 desktop:py-24"
+      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-12 tablet:py-14 desktop:py-16"
     >
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full scale-[0.78]">
         <motion.h2
           id="services-heading"
           className="text-3xl mobile:text-4xl tablet:text-5xl font-bold mb-4 text-center leading-tight uppercase tracking-wide"
