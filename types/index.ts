@@ -41,4 +41,5 @@ export interface ServicesContent {
 
 export interface ContactContent {
   heading: string;
+  linkedInUrl?: string;
 }

@@ -79,7 +79,7 @@ export default function Home() {
           services={servicesContent.services}
         />
 
-        <ContactSection heading={contactContent.heading}>
+        <ContactSection heading={contactContent.heading} linkedInUrl={contactContent.linkedInUrl}>
           <ContactForm onSubmit={handleContactSubmit} />
         </ContactSection>
       </main>

@@ -3,7 +3,7 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'COOforRent',
-    description: 'Fractional COO for hire. 25+ years in operations, field service, construction, and franchise systems.',
+    description: 'Fractional COO for Rent. 25+ years in operations, field service, construction, and franchise systems.',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com',
     logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com'}/logo.png`,
     telephone: '+1-830-837-8060',

@@ -26,6 +26,7 @@ const config: Config = {
       },
       fontFamily: {
         primary: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        spectral: ['var(--font-spectral)', 'serif'],
       },
       fontSize: {
         hero: '4rem',      // 64px

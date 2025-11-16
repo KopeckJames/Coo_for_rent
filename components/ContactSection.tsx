@@ -1,13 +1,15 @@
 'use client';
 
 import React from 'react';
+import { Linkedin } from 'lucide-react';
 
 interface ContactSectionProps {
   heading: string;
   children: React.ReactNode;
+  linkedInUrl?: string;
 }
 
-export default function ContactSection({ heading, children }: ContactSectionProps) {
+export default function ContactSection({ heading, children, linkedInUrl }: ContactSectionProps) {
   return (
     <section 
       id="contact" 
@@ -27,6 +29,20 @@ export default function ContactSection({ heading, children }: ContactSectionProp
           </p>
           {children}
         </div>
+
+        {/* LinkedIn Button */}
+        {linkedInUrl && (
+          <a
+            href={linkedInUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 bg-[#0A66C2] text-white px-6 py-4 flex items-center justify-center gap-3 shadow-lg border border-[#0A66C2] hover:bg-[#004182] transition-all duration-200 min-h-[44px] touch-target hover:scale-[1.02] active:scale-[0.98]"
+            aria-label="Connect with me on LinkedIn"
+          >
+            <Linkedin className="w-5 h-5" />
+            <span className="font-semibold text-base">Connect with me on LinkedIn</span>
+          </a>
+        )}
       </div>
     </section>
   );

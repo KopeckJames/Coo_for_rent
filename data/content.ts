@@ -23,7 +23,7 @@ export const navigationLinks: NavigationLink[] = [
 
 // About Section Content
 export const aboutContent: AboutContent = {
-  heading: 'Fractional COO for Hire',
+  heading: 'Fractional COO for Rent',
   content: [
     'Based in Texas, I work with founders, trades, service companies, and restaurant groups who are scaling fast, but losing control. I build systems, people, and processes that hold up — even when your business is moving fast.',
     '25+ years\' experience in operations, field service, construction, and franchise systems. I\'ve led 50+ teams across 4 major cities.',
@@ -90,4 +90,5 @@ export const servicesContent: ServicesContent = {
 // Contact Section Content
 export const contactContent: ContactContent = {
   heading: 'Get in Touch',
+  linkedInUrl: 'https://www.linkedin.com/company/coo-for-rent/',
 };

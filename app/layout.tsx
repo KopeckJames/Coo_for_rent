@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
+import { Spectral } from 'next/font/google';
 import StructuredData from "@/components/StructuredData";
 import { WebVitals } from "./web-vitals";
 import "./globals.css";
+
+const spectral = Spectral({
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-spectral',
+});
 
 export const metadata: Metadata = {
   title: {
     default: "COOforRent - Fractional COO Services",
     template: "%s | COOforRent",
   },
-  description: "Fractional COO for hire based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems, people, and processes that hold up when your business is moving fast.",
-  keywords: ["fractional COO", "COO for hire", "operations consulting", "field service operations", "construction operations", "franchise systems", "Texas COO", "operational leadership", "business systems"],
+  description: "Fractional COO for Rent based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems, people, and processes that hold up when your business is moving fast.",
+  keywords: ["fractional COO", "COO for Rent", "operations consulting", "field service operations", "construction operations", "franchise systems", "Texas COO", "operational leadership", "business systems"],
   authors: [{ name: "COOforRent" }],
   creator: "COOforRent",
   publisher: "COOforRent",
@@ -21,8 +30,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "COOforRent - Fractional COO for Hire",
-    description: "Fractional COO for hire based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems that hold up when your business is moving fast.",
+    title: "COOforRent - Fractional COO for Rent",
+    description: "Fractional COO for Rent based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems that hold up when your business is moving fast.",
     siteName: "COOforRent",
     images: [
       {
@@ -35,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "COOforRent - Fractional COO for Hire",
-    description: "Fractional COO for hire based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems that hold up when your business is moving fast.",
+    title: "COOforRent - Fractional COO for Rent",
+    description: "Fractional COO for Rent based in Texas. 25+ years in operations, field service, construction, and franchise systems. I build systems that hold up when your business is moving fast.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -67,7 +76,7 @@ export default function RootLayout({
       <head>
         <StructuredData />
       </head>
-      <body className="font-primary antialiased">
+      <body className={`${spectral.variable} font-spectral antialiased`}>
         <WebVitals />
         {children}
       </body>

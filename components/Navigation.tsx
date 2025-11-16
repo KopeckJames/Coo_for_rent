@@ -45,7 +45,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary-white border-b border-neutral-gray200 shadow-sm" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 tablet:h-16">
+        <div className="flex items-center justify-between h-16 tablet:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a
@@ -57,11 +57,11 @@ export default function Navigation() {
               <Image
                 src="/logo.png"
                 alt="COOforRent"
-                width={120}
-                height={40}
+                width={180}
+                height={60}
                 priority
                 sizes={imageSizePresets.logo}
-                className="h-10 w-auto"
+                className="h-12 tablet:h-14 w-auto"
               />
             </a>
           </div>

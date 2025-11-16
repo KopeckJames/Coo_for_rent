@@ -126,6 +126,7 @@ export default function AboutSection({
                 <div className="text-sm text-neutral-gray800">Based in Texas</div>
               </div>
             </div>
+
           </motion.div>
         </div>
       </div>
