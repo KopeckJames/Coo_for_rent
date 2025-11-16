@@ -1,9 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import MobileMenu from './MobileMenu';
-import { imageSizePresets } from '@/utils/imageOptimization';
 import { throttle } from '@/utils/performance';
 import { navigationLinks } from '@/data/content';
 import { smoothScrollToId, getCurrentSection } from '@/utils/smoothScroll';
@@ -45,27 +43,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary-white border-b border-neutral-gray200 shadow-sm" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 tablet:h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a
-              href="#hero"
-              onClick={(e) => handleNavClick(e, '#hero')}
-              className="text-lg tablet:text-xl font-bold text-primary-black hover:text-neutral-gray800 transition-colors flex items-center"
-              aria-label="COOforRent home"
-            >
-              <Image
-                src="/logo.png"
-                alt="COOforRent"
-                width={180}
-                height={60}
-                priority
-                sizes={imageSizePresets.logo}
-                className="h-12 tablet:h-14 w-auto"
-              />
-            </a>
-          </div>
-
+        <div className="flex items-center justify-center h-16 tablet:h-20 w-full">
           {/* Desktop Navigation */}
           <div className="hidden tablet:block">
             <ul className="flex items-center space-x-6 desktop:space-x-8">
