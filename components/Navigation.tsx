@@ -71,9 +71,11 @@ export default function Navigation() {
                 <button
                   onMouseEnter={() => setShowConsultDropdown(true)}
                   onMouseLeave={() => setShowConsultDropdown(false)}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(e, '#contact');
+                  onClick={() => {
+                    smoothScrollToId('contact', {
+                      offset: 64,
+                      duration: 800,
+                    });
                   }}
                   className="bg-primary-black text-primary-white px-6 py-2 text-sm desktop:text-base font-semibold hover:bg-neutral-gray900 transition-colors min-h-[44px] flex items-center"
                 >
