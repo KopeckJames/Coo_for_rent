@@ -29,7 +29,7 @@ export default function ServicesSection({
       id="services"
       ref={ref}
       aria-labelledby="services-heading"
-      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-12 tablet:py-14 desktop:py-16"
+      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-8 tablet:py-10 desktop:py-12"
     >
       <div className="max-w-7xl mx-auto w-full scale-[0.78]">
         <motion.h2

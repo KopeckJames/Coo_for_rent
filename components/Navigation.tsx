@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import MobileMenu from './MobileMenu';
 import { throttle } from '@/utils/performance';
 import { navigationLinks } from '@/data/content';
@@ -9,6 +10,7 @@ import { smoothScrollToId, getCurrentSection } from '@/utils/smoothScroll';
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showConsultDropdown, setShowConsultDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,6 +65,39 @@ export default function Navigation() {
                   </a>
                 </li>
               ))}
+              
+              {/* Free Consultation Button with Dropdown */}
+              <li className="relative">
+                <button
+                  onMouseEnter={() => setShowConsultDropdown(true)}
+                  onMouseLeave={() => setShowConsultDropdown(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(e, '#contact');
+                  }}
+                  className="bg-primary-black text-primary-white px-6 py-2 text-sm desktop:text-base font-semibold hover:bg-neutral-gray900 transition-colors min-h-[44px] flex items-center"
+                >
+                  Free Consultation
+                </button>
+                
+                {/* Dropdown with Infographic */}
+                {showConsultDropdown && (
+                  <div
+                    className="absolute top-full right-0 mt-2 w-[400px] bg-white shadow-2xl border-2 border-primary-black z-50"
+                    onMouseEnter={() => setShowConsultDropdown(true)}
+                    onMouseLeave={() => setShowConsultDropdown(false)}
+                  >
+                    <div className="relative w-full h-[500px]">
+                      <Image
+                        src="/recs/consult.png"
+                        alt="Free Consultation Information"
+                        fill
+                        className="object-contain p-4"
+                      />
+                    </div>
+                  </div>
+                )}
+              </li>
             </ul>
           </div>
 

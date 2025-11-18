@@ -15,7 +15,7 @@ export default function ContactSection({ heading, children, linkedInUrl }: Conta
     <section 
       id="contact" 
       aria-labelledby="contact-heading" 
-      className="min-h-screen flex items-center justify-center py-12 tablet:py-14 desktop:py-16 px-4 sm:px-6 lg:px-8 bg-neutral-gray100 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center py-8 tablet:py-10 desktop:py-12 px-4 sm:px-6 lg:px-8 bg-neutral-gray100 relative overflow-hidden"
     >
       {/* Decorative grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
