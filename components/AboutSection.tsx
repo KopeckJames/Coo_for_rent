@@ -48,10 +48,10 @@ export default function AboutSection({
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 tablet:grid-cols-2 gap-8 tablet:gap-12 desktop:gap-16 items-center">
+        <div className="grid grid-cols-1 tablet:grid-cols-2 gap-8 tablet:gap-12 desktop:gap-16 items-start">
           {imageUrl && (
             <motion.div
-              className="flex items-center justify-center relative"
+              className="space-y-6"
               variants={getAccessibleVariants(fadeIn)}
               initial="initial"
               animate={isInView ? 'animate' : 'initial'}
@@ -68,6 +68,13 @@ export default function AboutSection({
                   priority
                 />
               </div>
+              
+              {/* Intro Card under photo */}
+              <div className="bg-neutral-gray100 p-6 tablet:p-8 shadow-lg border border-neutral-gray200 max-w-md mx-auto">
+                <p className="text-base mobile:text-lg leading-relaxed text-neutral-gray800">
+                  {content[0]}
+                </p>
+              </div>
             </motion.div>
           )}
 
@@ -81,14 +88,17 @@ export default function AboutSection({
             {/* Content Card */}
             <div className="bg-neutral-gray100 p-6 tablet:p-8 shadow-lg border border-neutral-gray200">
               <div className="space-y-4">
-                {content.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-base mobile:text-lg leading-relaxed text-neutral-gray800"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {content.slice(1).map((paragraph, index) => {
+                  const isBoldHeader = ['What I Do', 'Where I Shine', 'How It Works', 'Ready to Talk?'].includes(paragraph);
+                  return (
+                    <p
+                      key={index}
+                      className={`text-base mobile:text-lg leading-relaxed text-neutral-gray800 ${isBoldHeader ? 'font-bold' : ''}`}
+                    >
+                      {paragraph}
+                    </p>
+                  );
+                })}
               </div>
             </div>
 
