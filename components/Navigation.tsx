@@ -11,6 +11,7 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showConsultDropdown, setShowConsultDropdown] = useState(false);
+  const [showConsultModal, setShowConsultModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,7 +130,51 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu */}
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <MobileMenu 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)}
+        onConsultClick={() => setShowConsultModal(true)}
+      />
+
+      {/* Mobile Consultation Modal */}
+      {showConsultModal && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 z-[60] flex items-center justify-center p-4"
+          onClick={() => setShowConsultModal(false)}
+        >
+          <div
+            className="relative bg-white max-w-2xl w-full max-h-[90vh] overflow-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowConsultModal(false)}
+              className="absolute top-2 right-2 bg-primary-black text-primary-white p-2 hover:bg-neutral-gray900 z-10"
+              aria-label="Close consultation info"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="relative w-full min-h-[500px]">
+              <Image
+                src="/recs/consult.png"
+                alt="Free Consultation Information"
+                width={800}
+                height={1000}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

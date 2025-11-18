@@ -8,9 +8,10 @@ import { navigationLinks } from '@/data/content';
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  onConsultClick: () => void;
 }
 
-export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, onConsultClick }: MobileMenuProps) {
   const reducedMotion = prefersReducedMotion();
 
   useEffect(() => {
@@ -134,6 +135,27 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       </a>
                     </motion.li>
                   ))}
+                  
+                  {/* Free Consultation Button */}
+                  <motion.li
+                    variants={linkVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{
+                      duration: animationDuration,
+                      delay: reducedMotion ? 0 : navigationLinks.length * 0.05,
+                    }}
+                  >
+                    <button
+                      onClick={() => {
+                        onConsultClick();
+                        onClose();
+                      }}
+                      className="w-full bg-primary-black text-primary-white px-6 py-3 text-lg font-semibold hover:bg-neutral-gray900 transition-colors min-h-[44px] flex items-center justify-center mt-4"
+                    >
+                      Free Consultation
+                    </button>
+                  </motion.li>
                 </ul>
               </nav>
             </div>
