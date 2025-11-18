@@ -4,6 +4,7 @@ import {
   ServicesContent,
   ContactContent,
   NavigationLink,
+  ProblemsContent,
 } from '@/types';
 
 // Hero Section Content
@@ -17,24 +18,62 @@ export const heroContent: HeroContent = {
 export const navigationLinks: NavigationLink[] = [
   { id: 'hero', label: 'Home', href: '#hero', order: 1 },
   { id: 'about', label: 'About', href: '#about', order: 2 },
-  { id: 'services', label: 'Services', href: '#services', order: 3 },
-  { id: 'contact', label: 'Contact', href: '#contact', order: 4 },
+  { id: 'problems', label: 'Sound Familiar?', href: '#problems', order: 3 },
+  { id: 'services', label: 'Services', href: '#services', order: 4 },
+  { id: 'contact', label: 'Contact', href: '#contact', order: 5 },
 ];
 
 // About Section Content
 export const aboutContent: AboutContent = {
-  heading: 'Fractional COO for Rent',
+  heading: 'Fractional COO | Operations Fixer | Scale-Up Partner',
   content: [
-    'Based in Texas, I work with founders, trades, service companies, and restaurant groups who are scaling fast, but losing control. I build systems, people, and processes that hold up — even when your business is moving fast.',
-    '25+ years\' experience in operations, field service, construction, and franchise systems. I\'ve led 50+ teams across 4 major cities.',
-    'I roll up my sleeves — no fluff, no buzzwords. Just systems that work.',
+    'I help small and mid-sized businesses get their operations under control, build real systems, and scale without burning out their teams or torching their margins.',
+    'What I Do • Build processes that actually get followed • Clean up workflows, tech stacks, and reporting • Improve margins through smarter scheduling & resource planning • Create accountability without killing culture • Get teams aligned, fast',
+    'Where I Shine Service companies, multi-location operations, field teams, regulated environments, dispatch-heavy workflows, and any business that grew too fast and now needs structure.',
+    'How It Works Flexible monthly retainer — part-time, interim, or project-based. I step in, fix the bottlenecks, build the systems, and leave you with a team that runs smoother than ever.',
+    'Ready to Talk? Let\'s sit down for a no-BS strategy call and see what\'s possible',
   ],
   imageUrl: '/sonnytransparent.png',
 };
 
+// Problems Section Content
+export const problemsContent: ProblemsContent = {
+  heading: 'Does any of this sound familiar?',
+  problems: [
+    {
+      id: 'bottleneck',
+      title: 'Everything has to run through you',
+      description:
+        'If every decision, approval, fire-drill, and bottleneck has your name on it… you don\'t own a business - you work for it.',
+      order: 1,
+    },
+    {
+      id: 'blame-culture',
+      title: 'When something goes wrong, you immediately look for who to blame',
+      description:
+        'That\'s burnout talking. When systems are weak, blame becomes the default. When systems are strong, problems get fixed before they ever reach your desk.',
+      order: 2,
+    },
+    {
+      id: 'babysitting',
+      title: 'You know every employee\'s weaknesses and still hope they "straighten out"',
+      description:
+        'But that\'s not how companies grow. You scale faster when you stop babysitting weaknesses and start building a structure that plays to people\'s strengths.',
+      order: 3,
+    },
+    {
+      id: 'external-blame',
+      title: 'When you miss a sales target, you immediately blame the market, the customer, or the economy',
+      description:
+        'But let\'s be real - growth doesn\'t come from pointing fingers outward. The companies that win are the ones that pause, look in the mirror, adjust fast, and attack the next month with a tighter plan and a sharper edge.',
+      order: 4,
+    },
+  ],
+};
+
 // Services Section Content
 export const servicesContent: ServicesContent = {
-  heading: 'Packages',
+  heading: 'Flexible Packages',
   services: [
     {
       id: 'chaos-to-clarity',
@@ -60,30 +99,7 @@ export const servicesContent: ServicesContent = {
       icon: 'phone',
       order: 3,
     },
-    {
-      id: 'operations-overhaul',
-      title: 'Operations Overhaul',
-      description:
-        'Complete assessment and redesign of operational systems, workflows, and processes. Eliminate bottlenecks and build scalable infrastructure.',
-      icon: 'settings',
-      order: 4,
-    },
-    {
-      id: 'dispatch-field-service',
-      title: 'Dispatch & Field Service Efficiency',
-      description:
-        'Optimize scheduling, routing, and field operations. Improve response times, reduce costs, and increase customer satisfaction for service-based businesses.',
-      icon: 'truck',
-      order: 5,
-    },
-    {
-      id: 'margin-profit-optimization',
-      title: 'Margin & Profit Optimization',
-      description:
-        'Identify profit leaks, optimize pricing strategies, and improve operational margins. Data-driven approach to maximize profitability without sacrificing quality.',
-      icon: 'trending-up',
-      order: 6,
-    },
+
   ],
 };
 

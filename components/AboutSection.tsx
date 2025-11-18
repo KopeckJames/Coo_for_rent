@@ -43,7 +43,7 @@ export default function AboutSection({
           transition={getAccessibleTransition(smoothTransition)}
           className="text-center mb-12 tablet:mb-16"
         >
-          <h2 id="about-heading" className="text-3xl mobile:text-4xl tablet:text-5xl font-bold mb-6 leading-tight uppercase tracking-wide">
+          <h2 id="about-heading" className="text-2xl mobile:text-3xl tablet:text-4xl font-bold mb-6 leading-tight uppercase tracking-wide whitespace-nowrap">
             {heading}
           </h2>
         </motion.div>

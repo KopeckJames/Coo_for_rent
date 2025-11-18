@@ -34,7 +34,7 @@ export default function ServicesSection({
       <div className="max-w-7xl mx-auto w-full scale-[0.78]">
         <motion.h2
           id="services-heading"
-          className="text-3xl mobile:text-4xl tablet:text-5xl font-bold mb-4 text-center leading-tight uppercase tracking-wide"
+          className="text-2xl mobile:text-3xl tablet:text-4xl font-bold mb-4 text-center leading-tight uppercase tracking-wide"
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate={isInView ? 'animate' : 'initial'}

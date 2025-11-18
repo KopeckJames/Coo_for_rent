@@ -21,7 +21,7 @@ export default function ContactSection({ heading, children, linkedInUrl }: Conta
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
       
       <div className="w-full max-w-6xl relative z-10">
-        <h2 id="contact-heading" className="text-3xl mobile:text-4xl tablet:text-5xl font-bold text-primary-black text-center mb-8 tablet:mb-12 leading-tight uppercase tracking-wide">
+        <h2 id="contact-heading" className="text-2xl mobile:text-3xl tablet:text-4xl font-bold text-primary-black text-center mb-8 tablet:mb-12 leading-tight uppercase tracking-wide">
           {heading}
         </h2>
         

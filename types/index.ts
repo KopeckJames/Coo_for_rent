@@ -43,3 +43,15 @@ export interface ContactContent {
   heading: string;
   linkedInUrl?: string;
 }
+
+export interface Problem {
+  id: string;
+  title: string;
+  description: string;
+  order: number;
+}
+
+export interface ProblemsContent {
+  heading: string;
+  problems: Problem[];
+}

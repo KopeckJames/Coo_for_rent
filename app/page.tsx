@@ -6,6 +6,7 @@ import { ContactFormData } from '@/types';
 import {
   heroContent,
   aboutContent,
+  problemsContent,
   servicesContent,
   contactContent,
 } from '@/data/content';
@@ -16,6 +17,10 @@ const HeroSection = dynamic(() => import('@/components/HeroSection'), {
 });
 
 const AboutSection = dynamic(() => import('@/components/AboutSection'), {
+  ssr: true,
+});
+
+const ProblemsSection = dynamic(() => import('@/components/ProblemsSection'), {
   ssr: true,
 });
 
@@ -73,6 +78,8 @@ export default function Home() {
           content={aboutContent.content}
           imageUrl={aboutContent.imageUrl}
         />
+
+        <ProblemsSection content={problemsContent} />
 
         <ServicesSection
           heading={servicesContent.heading}
