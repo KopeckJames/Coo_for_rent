@@ -52,7 +52,7 @@ export const problemsContent: ProblemsContent = {
       id: 'bottleneck',
       title: 'Everything has to run through you',
       description:
-        'If every decision, approval, fire-drill, and bottleneck has your name on it… you don\'t own a business - you work for it.',
+        'If every decision, approval, fire-drill, and bottleneck has your name on it… you don\'t own a business - you work for it!',
       order: 1,
     },
     {
