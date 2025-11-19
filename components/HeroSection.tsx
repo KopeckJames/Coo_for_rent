@@ -30,11 +30,11 @@ export default function HeroSection({
     <section
       id="hero"
       aria-label="Hero section"
-      className="min-h-screen bg-primary-white text-primary-black flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8"
+      className="min-h-screen bg-primary-white text-primary-black flex items-center justify-center px-3 sm:px-6 lg:px-8 py-4"
     >
       <div className="max-w-4xl mx-auto w-full text-center">
         <motion.div
-          className="mb-6"
+          className="mb-3 tablet:mb-6"
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate="animate"
@@ -46,11 +46,11 @@ export default function HeroSection({
             width={250}
             height={83}
             priority
-            className="h-auto w-full max-w-[250px] mx-auto"
+            className="h-auto w-full max-w-[200px] tablet:max-w-[250px] mx-auto"
           />
         </motion.div>
         <motion.p
-          className="text-xl mobile:text-2xl tablet:text-3xl mb-8 text-neutral-gray800 leading-relaxed"
+          className="text-base mobile:text-lg tablet:text-3xl mb-4 tablet:mb-8 text-neutral-gray800 leading-relaxed px-1"
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate="animate"

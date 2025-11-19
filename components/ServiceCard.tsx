@@ -42,7 +42,7 @@ export default function ServiceCard({
 
   return (
     <motion.article
-      className="bg-neutral-gray100 border border-neutral-gray200 p-8 shadow-lg will-change-transform transition-all duration-200 hover:shadow-2xl hover:border-primary-black focus-within:shadow-2xl focus-within:border-primary-black group h-full flex flex-col"
+      className="bg-neutral-gray100 border border-neutral-gray200 p-4 tablet:p-8 shadow-lg will-change-transform transition-all duration-200 hover:shadow-2xl hover:border-primary-black focus-within:shadow-2xl focus-within:border-primary-black group h-full flex flex-col"
       variants={getAccessibleVariants(fadeIn)}
       initial="initial"
       animate={isInView ? 'animate' : 'initial'}
@@ -51,13 +51,13 @@ export default function ServiceCard({
       whileTap={scaleOnTap}
     >
       {IconComponent && (
-        <div className="mb-6 inline-flex items-center justify-center w-16 h-16 bg-primary-black text-primary-white group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
-          <IconComponent className="w-8 h-8" />
+        <div className="mb-4 tablet:mb-6 inline-flex items-center justify-center w-12 h-12 tablet:w-16 tablet:h-16 bg-primary-black text-primary-white group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+          <IconComponent className="w-6 h-6 tablet:w-8 tablet:h-8" />
         </div>
       )}
       {!IconComponent && icon && (icon.startsWith('/') || icon.startsWith('http')) && (
-        <div className="mb-6" aria-hidden="true">
-          <div className="relative w-16 h-16">
+        <div className="mb-4 tablet:mb-6" aria-hidden="true">
+          <div className="relative w-12 h-12 tablet:w-16 tablet:h-16">
             <Image
               src={icon}
               alt=""
@@ -70,10 +70,10 @@ export default function ServiceCard({
           </div>
         </div>
       )}
-      <h3 className="text-2xl font-bold mb-4 leading-tight text-primary-black">
+      <h3 className="text-lg mobile:text-xl tablet:text-2xl font-bold mb-3 tablet:mb-4 leading-tight text-primary-black">
         {title}
       </h3>
-      <p className="text-base leading-relaxed text-neutral-gray800 flex-grow">
+      <p className="text-sm mobile:text-base leading-relaxed text-neutral-gray800 flex-grow">
         {description}
       </p>
     </motion.article>

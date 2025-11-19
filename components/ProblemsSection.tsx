@@ -27,12 +27,12 @@ export default function ProblemsSection({ content }: ProblemsSectionProps) {
       id="problems"
       ref={ref}
       aria-labelledby="problems-heading"
-      className="bg-primary-white text-primary-black px-4 sm:px-6 lg:px-8 py-8 tablet:py-10 desktop:py-12"
+      className="bg-primary-white text-primary-black px-3 sm:px-6 lg:px-8 pt-3 pb-3 tablet:pt-8 tablet:pb-8 desktop:pt-10 desktop:pb-10"
     >
       <div className="max-w-7xl mx-auto w-full scale-[0.78]">
         <motion.h2
           id="problems-heading"
-          className="text-2xl mobile:text-3xl tablet:text-4xl font-bold mb-12 tablet:mb-16 text-center leading-tight uppercase tracking-wide"
+          className="text-lg mobile:text-xl tablet:text-4xl font-bold mb-4 tablet:mb-12 text-center leading-tight uppercase tracking-wide"
           variants={getAccessibleVariants(fadeIn)}
           initial="initial"
           animate={isInView ? 'animate' : 'initial'}
@@ -41,11 +41,11 @@ export default function ProblemsSection({ content }: ProblemsSectionProps) {
           {content.heading}
         </motion.h2>
 
-        <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 tablet:gap-8">
+        <div className="grid grid-cols-1 tablet:grid-cols-2 gap-3 tablet:gap-8">
           {content.problems.map((problem, index) => (
             <motion.article
               key={problem.id}
-              className="bg-neutral-gray100 border border-neutral-gray200 p-8 shadow-lg will-change-transform transition-all duration-200 hover:shadow-2xl hover:border-primary-black focus-within:shadow-2xl focus-within:border-primary-black group h-full flex flex-col"
+              className="bg-neutral-gray100 border border-neutral-gray200 p-4 tablet:p-8 shadow-lg will-change-transform transition-all duration-200 hover:shadow-2xl hover:border-primary-black focus-within:shadow-2xl focus-within:border-primary-black group h-full flex flex-col"
               variants={getAccessibleVariants(fadeIn)}
               initial="initial"
               animate={isInView ? 'animate' : 'initial'}
@@ -53,10 +53,10 @@ export default function ProblemsSection({ content }: ProblemsSectionProps) {
               whileHover={scaleOnHover}
               whileTap={scaleOnTap}
             >
-              <h3 className="text-2xl font-bold mb-4 leading-tight text-primary-black">
-                • {problem.title}
+              <h3 className="text-lg mobile:text-xl tablet:text-2xl font-bold mb-3 tablet:mb-4 leading-tight text-primary-black">
+                {problem.title}
               </h3>
-              <p className="text-base leading-relaxed text-neutral-gray800 flex-grow">
+              <p className="text-sm mobile:text-base leading-relaxed text-neutral-gray800 flex-grow">
                 {problem.description}
               </p>
             </motion.article>
