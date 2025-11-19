@@ -25,7 +25,7 @@ export const navigationLinks: NavigationLink[] = [
 
 // About Section Content
 export const aboutContent: AboutContent = {
-  heading: 'Fractional COO | Operations Fixer | Scale-Up Partner',
+  heading: 'Fractional COO | Operations Fixer | Scale‑Up Partner',
   content: [
     'I help small and mid-sized businesses get their operations under control, build real systems, and scale without burning out their teams or torching their margins.',
     'What I Do',
