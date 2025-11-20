@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Spectral } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next";
 import StructuredData from "@/components/StructuredData";
 import { WebVitals } from "./web-vitals";
 import "./globals.css";
@@ -102,6 +103,7 @@ export default function RootLayout({
       <body className={`${spectral.variable} font-spectral antialiased`}>
         <WebVitals />
         {children}
+        <Analytics />
       </body>
     </html>
   );
