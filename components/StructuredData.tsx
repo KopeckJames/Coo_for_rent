@@ -37,6 +37,22 @@ export default function StructuredData() {
         '@type': 'State',
         name: 'Texas',
       },
+      {
+        '@type': 'City',
+        name: 'Dallas',
+      },
+      {
+        '@type': 'City',
+        name: 'Houston',
+      },
+      {
+        '@type': 'City',
+        name: 'Austin',
+      },
+      {
+        '@type': 'City',
+        name: 'San Antonio',
+      },
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
