@@ -8,6 +8,7 @@ import {
   aboutContent,
   problemsContent,
   servicesContent,
+  faqContent,
   contactContent,
 } from '@/data/content';
 
@@ -29,6 +30,10 @@ const ServicesSection = dynamic(() => import('@/components/ServicesSection'), {
 });
 
 const ContactSection = dynamic(() => import('@/components/ContactSection'), {
+  ssr: true,
+});
+
+const FaqSection = dynamic(() => import('@/components/FaqSection'), {
   ssr: true,
 });
 
@@ -85,6 +90,8 @@ export default function Home() {
           heading={servicesContent.heading}
           services={servicesContent.services}
         />
+
+        <FaqSection content={faqContent} />
 
         <ContactSection heading={contactContent.heading} linkedInUrl={contactContent.linkedInUrl}>
           <ContactForm onSubmit={handleContactSubmit} />

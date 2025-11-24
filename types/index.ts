@@ -55,3 +55,15 @@ export interface ProblemsContent {
   heading: string;
   problems: Problem[];
 }
+
+export interface Faq {
+  id: string;
+  question: string;
+  answer: string;
+  order: number;
+}
+
+export interface FaqContent {
+  heading: string;
+  faqs: Faq[];
+}
