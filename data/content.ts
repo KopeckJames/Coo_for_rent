@@ -20,7 +20,7 @@ export const navigationLinks: NavigationLink[] = [
   { id: 'hero', label: 'Home', href: '#hero', order: 1 },
   { id: 'about', label: 'About', href: '#about', order: 2 },
   { id: 'problems', label: 'Sound Familiar?', href: '#problems', order: 3 },
-  { id: 'services', label: 'Services', href: '#services', order: 4 },
+  { id: 'pricing', label: 'Pricing', href: '#pricing', order: 4 },
   { id: 'faq', label: 'FAQ', href: '#faq', order: 5 },
   { id: 'contact', label: 'Contact', href: '#contact', order: 6 },
 ];

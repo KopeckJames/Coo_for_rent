@@ -7,10 +7,10 @@ import {
   heroContent,
   aboutContent,
   problemsContent,
-  servicesContent,
   faqContent,
   contactContent,
 } from '@/data/content';
+import { pricingContent } from '@/data/pricing';
 
 // Dynamic imports for components with animations to reduce initial bundle size
 const HeroSection = dynamic(() => import('@/components/HeroSection'), {
@@ -25,7 +25,7 @@ const ProblemsSection = dynamic(() => import('@/components/ProblemsSection'), {
   ssr: true,
 });
 
-const ServicesSection = dynamic(() => import('@/components/ServicesSection'), {
+const PricingTiers = dynamic(() => import('@/components/PricingTiers'), {
   ssr: true,
 });
 
@@ -86,10 +86,7 @@ export default function Home() {
 
         <ProblemsSection content={problemsContent} />
 
-        <ServicesSection
-          heading={servicesContent.heading}
-          services={servicesContent.services}
-        />
+        <PricingTiers tiers={pricingContent.tiers} />
 
         <FaqSection content={faqContent} />
 

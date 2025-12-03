@@ -67,3 +67,29 @@ export interface FaqContent {
   heading: string;
   faqs: Faq[];
 }
+
+export interface PricingTier {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  savings?: string;
+  featured?: boolean;
+  sessions: {
+    total: string;
+    breakdown: string[];
+  };
+  features: string[];
+  subscribeUrl: string;
+  order: number;
+}
+
+export interface PricingContent {
+  hero: {
+    title: string;
+    description: string[];
+    benefits: string[];
+  };
+  tiers: PricingTier[];
+  faqs: Faq[];
+}
