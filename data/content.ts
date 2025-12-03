@@ -29,7 +29,7 @@ export const navigationLinks: NavigationLink[] = [
 export const aboutContent: AboutContent = {
   heading: 'Fractional COO | Operations Fixer | Scale‑Up Partner',
   content: [
-    'I help small and mid-sized businesses get their operations under control, build real systems, and scale without burning out their teams or torching their margins.',
+    'Business\' under $10 million do not need a full time COO. I help small and mid-sized businesses get their operations under control, build real systems, and scale without burning out their teams or torching their margins.',
     'What I Do',
     'Build processes that actually get followed',
     'Clean up workflows, tech stacks, and reporting',
