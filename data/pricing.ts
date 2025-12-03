@@ -114,7 +114,7 @@ export const pricingContent: PricingContent = {
       id: 'location',
       question: 'Where does COO for Rent provide services?',
       answer:
-        'COO for Rent is based in Texas, helping small business thrive by serving the local communities with a focus on Cibolo, Schertz, Universal City, Austin, San Antonio, and surrounding areas.',
+        'COO for Rent is based in Texas, helping small business thrive by serving the local communities with a focus on Cibolo, Schertz, Universal City, Austin, San Antonio, and surrounding areas. Remote help available for business\' outside of Texas.',
       order: 5,
     },
     {
