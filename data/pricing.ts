@@ -32,8 +32,6 @@ export const pricingContent: PricingContent = {
       },
       features: [
         '1:1 sessions can be used to manage multiple people in a department',
-        'Sessions can be mixed & matched',
-        'Subscribe for execs for 1+ depts. Scale up/down anytime',
         'Initial 3 month commitment is required, then month to month.',
       ],
       subscribeUrl: '#contact',
@@ -56,8 +54,6 @@ export const pricingContent: PricingContent = {
       },
       features: [
         '1:1 sessions can be used to manage multiple people in a department',
-        'Sessions can be mixed & matched',
-        'Subscribe for execs for 1+ depts. Scale up/down anytime',
         'Initial 3 month commitment is required, then month to month.',
       ],
       subscribeUrl: '#contact',
@@ -79,8 +75,6 @@ export const pricingContent: PricingContent = {
       },
       features: [
         '1:1 sessions can be used to manage multiple people in a department',
-        'Sessions can be mixed & matched',
-        'Subscribe for execs for 1+ depts. Scale up/down anytime',
         'Initial 3 month commitment is required, then month to month.',
       ],
       subscribeUrl: '#contact',
