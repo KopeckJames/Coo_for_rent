@@ -111,13 +111,7 @@ export default function PricingCard({ tier, index, isInView }: PricingCardProps)
         </div>
       </div>
 
-      <div className="space-y-3 mt-auto pt-6">
-        <button
-          onClick={handleCtaClick}
-          className="w-full bg-primary-black text-primary-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-neutral-gray800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-black focus:ring-offset-2"
-        >
-          Get Started
-        </button>
+      <div className="mt-auto pt-6">
         <a
           href="#contact"
           onClick={(e) => {
