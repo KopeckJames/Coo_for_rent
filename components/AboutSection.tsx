@@ -90,14 +90,13 @@ export default function AboutSection({
               <div className="space-y-2 tablet:space-y-3">
                 {content.slice(1).map((paragraph, index) => {
                   const isBoldHeader = ['What I Do', 'Where I Shine', 'How It Works', 'Ready to Talk?'].includes(paragraph);
-                  const isListItem = !isBoldHeader && index > 0 && !['What I Do', 'Where I Shine', 'How It Works', 'Ready to Talk?'].includes(content.slice(1)[index - 1]);
                   
                   return (
                     <p
                       key={index}
                       className={`text-sm mobile:text-base tablet:text-lg leading-relaxed text-neutral-gray800 ${
                         isBoldHeader ? 'font-bold mt-3 tablet:mt-4 first:mt-0' : ''
-                      } ${isListItem ? 'pl-3 tablet:pl-4' : ''}`}
+                      }`}
                     >
                       {paragraph}
                     </p>
