@@ -57,7 +57,7 @@ export default function AboutSection({
               animate={isInView ? 'animate' : 'initial'}
               transition={getAccessibleTransition(getDelayedTransition(0.2))}
             >
-              <div className="relative w-full max-w-md mx-auto aspect-[3/4]">
+              <div className="relative w-full max-w-md mx-auto aspect-square">
                 <Image
                   src={imageUrl}
                   alt="Sonny - Fractional COO with 25+ years of operations experience"

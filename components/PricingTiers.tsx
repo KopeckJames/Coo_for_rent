@@ -39,7 +39,7 @@ export default function PricingTiers({ tiers }: PricingTiersProps) {
           Flexible Packages
         </motion.h2>
 
-        <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-6 tablet:gap-8">
+        <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 tablet:gap-8">
           {tiers.map((tier, index) => (
             <PricingCard
               key={tier.id}

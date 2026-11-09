@@ -7,7 +7,7 @@ export default function StructuredData() {
     description: 'Fractional COO services in Texas. 25+ years experience in operations management, field service, construction, and franchise systems. Expert operational leadership for scaling businesses.',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com',
     logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com'}/logo.png`,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com'}/sonnytransparent.png`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cooforrent.com'}/sonny_headshot.jpg`,
     telephone: '+1-830-837-8060',
     email: 'Sonny@CooForRent.com',
     sameAs: [
@@ -46,24 +46,24 @@ export default function StructuredData() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Chaos to Clarity',
-            description: '90-day intensive engagement to stabilize operations and implement core systems',
+            name: 'Working Session',
+            description: '90-minute working session to identify root causes of one priority operational challenge, with a prioritized action plan',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Interim COO',
-            description: '3–6 month embedded leadership to build operational infrastructure',
+            name: '30-Day Sprint',
+            description: 'Identify root causes, implement practical solutions, and establish measurable performance standards within 30 days',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'On-Call Retainer',
-            description: 'Flexible monthly retainer for ongoing operational guidance',
+            name: 'Month-to-Month Retainer',
+            description: 'Ongoing operations and leadership coaching with up to 16 hours of consulting support per month',
           },
         },
         {

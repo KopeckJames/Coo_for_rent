@@ -71,15 +71,13 @@ export interface FaqContent {
 export interface PricingTier {
   id: string;
   name: string;
-  description: string;
+  description: string[];
   price: string;
-  savings?: string;
+  priceLabel?: string;
   featured?: boolean;
-  sessions: {
-    total: string;
-    breakdown: string[];
-  };
-  features: string[];
+  includedHeading: string;
+  included: string[];
+  ctaLabel?: string;
   subscribeUrl: string;
   order: number;
 }
