@@ -54,57 +54,43 @@ export default function PricingCard({ tier, index, isInView }: PricingCardProps)
 
       <div className="flex-grow">
         <h3 className="text-xl mobile:text-2xl tablet:text-3xl font-bold mb-4 text-primary-black uppercase tracking-wide leading-tight text-center">
-          {tier.name.replace(' Lvl', '\nLvl').split('\n').map((line, i) => (
-            <span key={i} className="block">
-              {line}
-            </span>
-          ))}
+          {tier.name}
         </h3>
 
-        <p className="text-sm mobile:text-base tablet:text-lg leading-relaxed text-neutral-gray800 mb-6">
-          {tier.description}
-        </p>
-
-        <div className="mb-6">
-          <p className="text-2xl mobile:text-3xl tablet:text-4xl font-bold text-primary-black mb-2">
-            {tier.price}
-          </p>
-          {tier.savings && (
-            <p className="text-sm mobile:text-base text-neutral-gray700 font-semibold">
-              {tier.savings}
+        <div className="space-y-3 mb-6">
+          {tier.description.map((paragraph, idx) => (
+            <p
+              key={idx}
+              className="text-sm mobile:text-base tablet:text-lg leading-relaxed text-neutral-gray800"
+            >
+              {paragraph}
             </p>
-          )}
+          ))}
         </div>
 
         <div className="mb-6 pb-6 border-b border-neutral-gray300">
-          <h4 className="text-lg mobile:text-xl font-bold text-primary-black mb-3 uppercase">
-            {tier.sessions.total}
-          </h4>
-          <ul className="space-y-2">
-            {tier.sessions.breakdown.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex items-start gap-2 text-sm mobile:text-base text-neutral-gray800"
-              >
-                <span className="text-primary-black font-bold mt-1">•</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {tier.priceLabel && (
+            <p className="text-sm mobile:text-base font-semibold uppercase tracking-wide text-neutral-gray700 mb-1">
+              {tier.priceLabel}
+            </p>
+          )}
+          <p className="text-2xl mobile:text-3xl tablet:text-4xl font-bold text-primary-black">
+            {tier.price}
+          </p>
         </div>
 
         <div className="mb-6">
           <h4 className="text-lg mobile:text-xl font-bold text-primary-black mb-3 uppercase">
-            Flexible Terms
+            {tier.includedHeading}
           </h4>
           <ul className="space-y-2">
-            {tier.features.map((feature, idx) => (
+            {tier.included.map((item, idx) => (
               <li
                 key={idx}
                 className="flex items-start gap-2 text-sm mobile:text-base text-neutral-gray800"
               >
                 <span className="text-primary-black font-bold mt-1">✓</span>
-                <span>{feature}</span>
+                <span>{item}</span>
               </li>
             ))}
           </ul>
@@ -125,7 +111,7 @@ export default function PricingCard({ tier, index, isInView }: PricingCardProps)
           }}
           className="block w-full text-center border-2 border-primary-black text-primary-black px-6 py-3 font-bold uppercase tracking-wide hover:bg-primary-black hover:text-primary-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-black focus:ring-offset-2"
         >
-          Book a Meeting
+          {tier.ctaLabel ?? 'Book a Meeting'}
         </a>
       </div>
     </motion.article>

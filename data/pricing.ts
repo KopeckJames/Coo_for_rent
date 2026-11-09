@@ -17,68 +17,91 @@ export const pricingContent: PricingContent = {
   },
   tiers: [
     {
-      id: 'chaos-to-clarity',
-      name: 'Chaos to Clarity Lvl 1',
-      description:
-        'No more missed weekly 1:1s, lack of expert guidance for the staff, and lack of executive department updates.',
-      price: '$3,500/mo',
-      sessions: {
-        total: '10 x 1 hour sessions',
-        breakdown: [
-          '4 x 1:1 Leadership & advisory sessions',
-          '4 x Strategy sessions',
-          '2 x Leadership update meetings',
-        ],
-      },
-      features: [
-        '1:1 sessions can be used to manage multiple people in a department',
-        'Initial 3 month commitment is required, then month to month.',
+      id: 'working-session',
+      name: 'Working Session',
+      description: [
+        "Help service business owners identify the root causes of operational challenges and develop a practical plan to address them. Clients leave with a clear understanding of what's holding their business back, two or three prioritized recommendations, and actionable next steps to improve performance, accountability, and efficiency.",
+      ],
+      price: '$550',
+      priceLabel: 'Investment',
+      includedHeading: 'Deliverables',
+      included: [
+        "Pre-session questionnaire to identify the owner's primary operational challenges",
+        '90-minute one-on-one working session via video conference',
+        'Review of one priority business issue, such as employee accountability, productivity, leadership, or operational inefficiencies',
+        'Written summary identifying key findings and root causes',
+        'Prioritized action plan with 2–3 recommendations and suggested next steps, delivered within three business days',
       ],
       subscribeUrl: '#contact',
       order: 1,
     },
     {
-      id: 'interim-coo',
-      name: 'Chaos to Clarity Lvl 2',
-      description:
-        'No more missed weekly 1:1s, infrequent expert guidance for the staff, and lack of executive department updates.',
-      price: '$6,500/mo',
-      featured: true,
-      sessions: {
-        total: '20 x 1 hour sessions',
-        breakdown: [
-          '8 x 1:1 Leadership & advisory sessions',
-          '8 x Strategy sessions',
-          '4 x Leadership update meetings',
-        ],
-      },
-      features: [
-        '1:1 sessions can be used to manage multiple people in a department',
-        'Initial 3 month commitment is required, then month to month.',
+      id: '30-day-sprint',
+      name: '30-Day Sprint',
+      description: [
+        "Help established service businesses address a critical operational challenge within 30 days. Whether it's employee accountability, inconsistent productivity, ineffective management, or inefficient processes, we'll identify the root causes, implement practical solutions, and establish measurable performance standards.",
+        'The goal is to move beyond recommendations and put improvements into action, giving owners better visibility, stronger management accountability, and greater control over daily operations.',
+      ],
+      price: '$3,850',
+      priceLabel: 'Investment',
+      includedHeading: 'Deliverables',
+      included: [
+        'Initial operational assessment focused on one priority business challenge',
+        'Review of relevant KPIs, processes, and management responsibilities',
+        'Identification of operational bottlenecks and root causes',
+        'Customized 30-day improvement plan with measurable objectives',
+        'Weekly leadership coaching and implementation sessions',
+        'Development of accountability measures and performance tracking',
+        'Implementation support for agreed-upon operational improvements',
+        'Final progress review with results, recommendations, and a 60-day follow-up roadmap',
       ],
       subscribeUrl: '#contact',
       order: 2,
     },
     {
-      id: 'on-call-retainer',
-      name: 'Chaos to Clarity Lvl 3',
-      description:
-        'No more missed weekly 1:1s, infrequent expert guidance for the staff, and lack of executive department updates.',
-      price: '$9,000/mo',
-      sessions: {
-        total: '30 x 1 hour sessions',
-        breakdown: [
-          '8 x 1:1 Leadership & advisory sessions',
-          '16x 1 hrs Strategy sessions',
-          '4 x Leadership update meetings',
-        ],
-      },
-      features: [
-        '1:1 sessions can be used to manage multiple people in a department',
-        'Initial 3 month commitment is required, then month to month.',
+      id: 'month-to-month-retainer',
+      name: 'Month-to-Month Retainer',
+      description: [
+        "Growing a service business shouldn't require the owner to manage every decision, employee issue, and operational problem.",
+        'This ongoing consulting engagement helps business owners strengthen their operations, develop capable managers, improve accountability, and establish systems that consistently deliver results.',
+        'I work directly with owners and their leadership teams to identify performance gaps, establish measurable expectations, coach managers, and implement practical operational improvements.',
+        'Rather than providing recommendations and walking away, I stay involved to help turn plans into action.',
+        "The goal: A more efficient, accountable, and profitable business that relies less on the owner's daily involvement.",
+      ],
+      price: '$4,400',
+      priceLabel: 'Monthly Investment',
+      includedHeading: 'Deliverables',
+      included: [
+        'Weekly operations and leadership coaching session',
+        'Monthly review of key performance indicators and business results',
+        'Development and monitoring of management accountability plans',
+        'Ongoing guidance on staffing, productivity, and operational efficiency',
+        'Support implementing process improvements and performance standards',
+        'Monthly owner strategy and progress review',
+        'Prioritized action items with assigned responsibilities and deadlines',
+        'Up to 4 days (approximately 16 hours) of consulting support per month, primarily remote',
       ],
       subscribeUrl: '#contact',
       order: 3,
+    },
+    {
+      id: 'free-consult',
+      name: 'Book Free Consult',
+      description: [
+        'Schedule a free 30-minute consultation to discuss your needs and see if we\'re a good fit.',
+      ],
+      price: 'Free',
+      priceLabel: 'Investment',
+      includedHeading: "What's Included",
+      included: [
+        '30-minute video call',
+        'Needs assessment',
+        'Q&A session',
+        'Strategic recommendations',
+      ],
+      ctaLabel: 'Book Free Consult',
+      subscribeUrl: '#contact',
+      order: 4,
     },
   ],
   faqs: [
@@ -93,7 +116,7 @@ export const pricingContent: PricingContent = {
       id: 'cost',
       question: 'How much does a fractional COO cost?',
       answer:
-        'Fractional COO services typically cost 30-50% less than hiring a full-time COO. Pricing varies based on engagement type (90-day intensive, interim COO, or monthly retainer) and the scope of work. Most arrangements are flexible monthly retainers tailored to your business needs.',
+        'Fractional COO services typically cost 30-50% less than hiring a full-time COO. Engagements range from a $550 Working Session and a $3,850 30-Day Sprint to a $4,400 Month-to-Month Retainer, so you can start with the level of support your business needs. Every engagement starts with a free 30-minute consultation.',
       order: 2,
     },
     {
@@ -128,7 +151,7 @@ export const pricingContent: PricingContent = {
       id: 'engagement-length',
       question: 'How long is a typical fractional COO engagement?',
       answer:
-        'Engagements vary by need: 90-day intensive engagement for crisis stabilization, 3-6 months for interim COO leadership, or ongoing monthly retainers for continuous operational guidance. Most clients start with a 90-day engagement and extend based on results.',
+        'Engagements vary by need: a 90-minute Working Session to diagnose one priority issue, a 30-Day Sprint to fix a critical operational challenge, or an ongoing Month-to-Month Retainer for continuous operational and leadership support.',
       order: 7,
     },
     {

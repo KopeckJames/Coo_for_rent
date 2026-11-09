@@ -43,7 +43,7 @@ export const aboutContent: AboutContent = {
     'Ready to Talk?',
     'Let\'s sit down for a no-BS strategy call and see what\'s possible.',
   ],
-  imageUrl: '/sonnytransparent.png',
+  imageUrl: '/sonny_headshot.jpg',
 };
 
 // Problems Section Content
@@ -128,7 +128,7 @@ export const faqContent: FaqContent = {
       id: 'cost',
       question: 'How much does a Fractional COO cost?',
       answer:
-        'Fractional COO services typically cost 30-50% less than hiring a full-time COO. Pricing varies based on engagement type (90-day intensive, interim COO, or monthly retainer) and the scope of work. Most arrangements are flexible monthly retainers tailored to your business needs.',
+        'Fractional COO services typically cost 30-50% less than hiring a full-time COO. Engagements range from a $550 Working Session and a $3,850 30-Day Sprint to a $4,400 Month-to-Month Retainer, so you can start with the level of support your business needs. Every engagement starts with a free 30-minute consultation.',
       order: 2,
     },
     {
@@ -163,7 +163,7 @@ export const faqContent: FaqContent = {
       id: 'engagement-length',
       question: 'How long is a typical Fractional COO engagement?',
       answer:
-        'Engagements vary by need: 90-day intensive engagement for crisis stabilization, 3-6 months for interim COO leadership, or ongoing monthly retainers for continuous operational guidance. Most clients start with a 90-day engagement and extend based on results.',
+        'Engagements vary by need: a 90-minute Working Session to diagnose one priority issue, a 30-Day Sprint to fix a critical operational challenge, or an ongoing Month-to-Month Retainer for continuous operational and leadership support.',
       order: 7,
     },
     {
