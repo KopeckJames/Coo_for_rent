@@ -12,6 +12,7 @@ import {
 } from '@/data/content';
 import { pricingContent } from '@/data/pricing';
 import { testimonialsContent } from '@/data/testimonials';
+import { videosContent } from '@/data/videos';
 
 // Dynamic imports for components with animations to reduce initial bundle size
 const HeroSection = dynamic(() => import('@/components/HeroSection'), {
@@ -19,6 +20,10 @@ const HeroSection = dynamic(() => import('@/components/HeroSection'), {
 });
 
 const AboutSection = dynamic(() => import('@/components/AboutSection'), {
+  ssr: true,
+});
+
+const VideoSection = dynamic(() => import('@/components/VideoSection'), {
   ssr: true,
 });
 
@@ -88,6 +93,8 @@ export default function Home() {
           content={aboutContent.content}
           imageUrl={aboutContent.imageUrl}
         />
+
+        <VideoSection content={videosContent} />
 
         <ProblemsSection content={problemsContent} />
 
