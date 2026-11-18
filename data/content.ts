@@ -21,8 +21,9 @@ export const navigationLinks: NavigationLink[] = [
   { id: 'about', label: 'About', href: '#about', order: 2 },
   { id: 'problems', label: 'Sound Familiar?', href: '#problems', order: 3 },
   { id: 'pricing', label: 'Pricing', href: '#pricing', order: 4 },
-  { id: 'faq', label: 'FAQ', href: '#faq', order: 5 },
-  { id: 'contact', label: 'Contact', href: '#contact', order: 6 },
+  { id: 'testimonials', label: 'Testimonials', href: '#testimonials', order: 5 },
+  { id: 'faq', label: 'FAQ', href: '#faq', order: 6 },
+  { id: 'contact', label: 'Contact', href: '#contact', order: 7 },
 ];
 
 // About Section Content
