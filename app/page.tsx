@@ -104,7 +104,7 @@ export default function Home() {
 
         <FaqSection content={faqContent} />
 
-        <ContactSection heading={contactContent.heading} linkedInUrl={contactContent.linkedInUrl}>
+        <ContactSection heading={contactContent.heading} linkedInUrl={contactContent.linkedInUrl} knexUrl={contactContent.knexUrl}>
           <ContactForm onSubmit={handleContactSubmit} />
         </ContactSection>
       </main>

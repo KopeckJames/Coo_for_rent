@@ -2,15 +2,16 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Linkedin } from 'lucide-react';
+import { ExternalLink, Linkedin } from 'lucide-react';
 
 interface ContactSectionProps {
   heading: string;
   children: React.ReactNode;
   linkedInUrl?: string;
+  knexUrl?: string;
 }
 
-export default function ContactSection({ heading, children, linkedInUrl }: ContactSectionProps) {
+export default function ContactSection({ heading, children, linkedInUrl, knexUrl }: ContactSectionProps) {
   return (
     <section 
       id="contact" 
@@ -59,6 +60,20 @@ export default function ContactSection({ heading, children, linkedInUrl }: Conta
               >
                 <Linkedin className="w-4 h-4 tablet:w-5 tablet:h-5" />
                 <span className="font-semibold text-sm tablet:text-base">Connect with me on LinkedIn</span>
+              </a>
+            )}
+
+            {/* Knex.pro link */}
+            {knexUrl && (
+              <a
+                href={knexUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 tablet:mt-4 bg-primary-black text-primary-white px-4 tablet:px-6 py-3 tablet:py-4 flex items-center justify-center gap-2 tablet:gap-3 shadow-lg border border-primary-black hover:bg-neutral-gray800 transition-all duration-200 min-h-[44px] touch-target hover:scale-[1.02] active:scale-[0.98]"
+                aria-label="Look me up at Knex.pro (opens in a new tab)"
+              >
+                <ExternalLink className="w-4 h-4 tablet:w-5 tablet:h-5" />
+                <span className="font-semibold text-sm tablet:text-base">Look me up at Knex.pro</span>
               </a>
             )}
           </div>

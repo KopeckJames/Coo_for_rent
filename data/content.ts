@@ -182,4 +182,5 @@ export const faqContent: FaqContent = {
 export const contactContent: ContactContent = {
   heading: 'Get in Touch',
   linkedInUrl: 'https://www.linkedin.com/company/coo-for-rent/',
+  knexUrl: 'https://knex.pro',
 };
