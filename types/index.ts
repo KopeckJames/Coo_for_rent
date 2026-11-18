@@ -42,6 +42,7 @@ export interface ServicesContent {
 export interface ContactContent {
   heading: string;
   linkedInUrl?: string;
+  knexUrl?: string;
 }
 
 export interface Problem {
