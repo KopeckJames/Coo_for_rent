@@ -19,11 +19,12 @@ export const heroContent: HeroContent = {
 export const navigationLinks: NavigationLink[] = [
   { id: 'hero', label: 'Home', href: '#hero', order: 1 },
   { id: 'about', label: 'About', href: '#about', order: 2 },
-  { id: 'problems', label: 'Sound Familiar?', href: '#problems', order: 3 },
-  { id: 'pricing', label: 'Pricing', href: '#pricing', order: 4 },
-  { id: 'testimonials', label: 'Testimonials', href: '#testimonials', order: 5 },
-  { id: 'faq', label: 'FAQ', href: '#faq', order: 6 },
-  { id: 'contact', label: 'Contact', href: '#contact', order: 7 },
+  { id: 'videos', label: 'Videos', href: '#videos', order: 3 },
+  { id: 'problems', label: 'Sound Familiar?', href: '#problems', order: 4 },
+  { id: 'pricing', label: 'Pricing', href: '#pricing', order: 5 },
+  { id: 'testimonials', label: 'Testimonials', href: '#testimonials', order: 6 },
+  { id: 'faq', label: 'FAQ', href: '#faq', order: 7 },
+  { id: 'contact', label: 'Contact', href: '#contact', order: 8 },
 ];
 
 // About Section Content

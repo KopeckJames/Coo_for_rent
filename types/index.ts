@@ -109,3 +109,16 @@ export interface TestimonialsContent {
   subheading?: string;
   testimonials: Testimonial[];
 }
+
+export interface Video {
+  id: string;
+  title: string;
+  driveFileId: string;
+  order: number;
+}
+
+export interface VideosContent {
+  heading: string;
+  subheading?: string;
+  videos: Video[];
+}
