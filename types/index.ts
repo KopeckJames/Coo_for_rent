@@ -91,3 +91,21 @@ export interface PricingContent {
   tiers: PricingTier[];
   faqs: Faq[];
 }
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  title: string;
+  relationship: string;
+  quote: string[];
+  imageUrl?: string;
+  linkedInUrl?: string;
+  featured?: boolean;
+  order: number;
+}
+
+export interface TestimonialsContent {
+  heading: string;
+  subheading?: string;
+  testimonials: Testimonial[];
+}
